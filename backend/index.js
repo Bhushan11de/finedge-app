@@ -17,16 +17,33 @@ const orderRoute = require("./routes/orderRoute");
 app.use(cors());
 app.use(bodyParser.json());
 
+// Add test route for debugging purposes
+app.get("/holdings", (req, res) => {
+  res.json({ message: "This is the holdings route!" });
+});
+
+app.get("/positions", (req, res) => {
+  res.json({ message: "This is the positions route!" });
+});
+
+app.get("/user", (req, res) => {
+  res.json({ message: "This is the user route!" });
+});
+
+app.get("/orders", (req, res) => {
+  res.json({ message: "This is the orders route!" });
+});
+
+// Use the actual routes
+app.use("/holdings", holdingsRoute);
+app.use("/positions", positionsRoute);
+app.use("/user", userRoute);
+app.use("/orders", orderRoute);
+
 // Add a default route to check if the server is working
 app.get("/", (req, res) => {
   res.send("Backend is working!");
 });
-
-// Use routes
-app.use("/holdings", holdingsRoute); // For holdings routes
-app.use("/positions", positionsRoute); // For positions routes
-app.use("/user", userRoute); // For user routes
-app.use("/orders", orderRoute); // For orders routes
 
 // Handle invalid routes (404)
 app.use((req, res) => {
