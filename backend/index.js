@@ -23,10 +23,15 @@ app.get("/", (req, res) => {
 });
 
 // Use routes
-app.use("/holdings", holdingsRoute);
-app.use("/positions", positionsRoute);
-app.use("/user", userRoute);
-app.use("/orders", orderRoute);
+app.use("/holdings", holdingsRoute); // For holdings routes
+app.use("/positions", positionsRoute); // For positions routes
+app.use("/user", userRoute); // For user routes
+app.use("/orders", orderRoute); // For orders routes
+
+// Handle invalid routes (404)
+app.use((req, res) => {
+  res.status(404).send("Route not found");
+});
 
 // Start the server and connect to DB
 app.listen(port, async () => {
