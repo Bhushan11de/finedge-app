@@ -5,8 +5,8 @@ const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
-const port = process.env.PORT || 3002;
-const url = process.env.MONGO_URL;
+const port = process.env.PORT || 3000;
+const url = process.env.MONGO_URL || "mongodb+srv://bhushan11deshmukh:Bhushan123@cluster0.6iitu.mongodb.net/mydatabase?retryWrites=true&w=majority";
 
 const holdingsRoute = require("./routes/holdingsRoute");
 const positionsRoute = require("./routes/positionsRoute");
