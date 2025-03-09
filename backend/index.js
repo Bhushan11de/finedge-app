@@ -17,6 +17,11 @@ const orderRoute = require("./routes/orderRoute");
 app.use(cors());
 app.use(bodyParser.json());
 
+// Add a default route to check if the server is working
+app.get("/", (req, res) => {
+  res.send("Backend is working!");
+});
+
 // Use routes
 app.use("/holdings", holdingsRoute);
 app.use("/positions", positionsRoute);
