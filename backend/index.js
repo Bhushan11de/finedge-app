@@ -1,9 +1,8 @@
 require("dotenv").config(); // Ensure this loads the .env file properly
 const express = require("express");
 const mongoose = require("mongoose");
-const app = express();
 const cors = require("cors");
-const bodyParser = require("body-parser");
+const app = express();
 
 const port = process.env.PORT || 3000; // Use environment variable for port
 const url = process.env.MONGO_URL; // Use environment variable for MongoDB connection
@@ -15,9 +14,9 @@ const userRoute = require("./routes/userRoute");
 const orderRoute = require("./routes/orderRoute");
 
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json()); // Use express.json() for parsing JSON instead of body-parser
 
-// Add test route for debugging purposes
+// Test routes for debugging purposes (Optional, you can remove after testing)
 app.get("/holdings", (req, res) => {
   res.json({ message: "This is the holdings route!" });
 });
@@ -56,7 +55,7 @@ app.listen(port, async () => {
 
   // Connect to MongoDB and handle errors
   try {
-    await mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
+    await mongoose.connect(url);
     console.log("Connected to MongoDB successfully");
   } catch (err) {
     console.error("Error connecting to MongoDB:", err.message);
