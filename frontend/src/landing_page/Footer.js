@@ -25,4 +25,25 @@ function Footer() {
               <a
                 href="https://www.facebook.com/santgadgebabaamravatiuniversity/"
                 target="_blank"
-                rel="noopener no
+                rel="noopener noreferrer"  {/* Fixed rel attribute */}
+                aria-label="Facebook"
+              >
+                <i className="fa-brands fa-facebook"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/santgadgebabaamravatiuniversity/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <i className="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+export default Footer;
