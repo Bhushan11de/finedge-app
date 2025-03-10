@@ -10,7 +10,7 @@ function Footer() {
               src="media/images/logo.svg"
               style={{ width: "50%" }}
               className="mb-3"
-              alt="Finedge Logo"  // Added alt attribute
+              alt="Finedge Logo"
             />
             <p className="mb-4">&copy; 2023 - 2024, Finedge. All rights reserved.</p>
             <div className="fs-4 d-flex gap-3 text-muted">
@@ -25,7 +25,7 @@ function Footer() {
               <a
                 href="https://www.facebook.com/santgadgebabaamravatiuniversity/"
                 target="_blank"
-                rel="noopener noreferrer"  {/* Fixed rel attribute */}
+                rel="noopener noreferrer"
                 aria-label="Facebook"
               >
                 <i className="fa-brands fa-facebook"></i>
