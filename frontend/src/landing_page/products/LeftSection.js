@@ -5,8 +5,7 @@ function LeftSection({ imageUrl, productName, productDesrption, tryDemo, learnMo
     <div className="container mt-5">
       <div className="row">
         <div className="col-6 p-5">
-          {/* Added meaningful alt text for image */}
-          <img src={imageUrl} alt={`Image of ${productName}`} />
+          <img src={imageUrl} alt="" /> {/* Removed redundant alt text */}
         </div>
         <div className="col-6 p-5 mt-5">
           <h1>{productName}</h1>
@@ -20,13 +19,11 @@ function LeftSection({ imageUrl, productName, productDesrption, tryDemo, learnMo
             </a>
           </div>
           <div className="mt-3">
-            {/* Added alt text for Google Play badge image */}
             <a href={googlePlay}>
-              <img src="media/images/googlePlayBadge.svg" alt="Download on Google Play" />
+              <img src="media/images/googlePlayBadge.svg" alt="" />
             </a>
-            {/* Added alt text for App Store badge image */}
             <a href={appStore} style={{ marginLeft: "50px" }}>
-              <img src="media/images/appstoreBadge.svg" alt="Download on the App Store" />
+              <img src="media/images/appstoreBadge.svg" alt="" />
             </a>
           </div>
         </div>
