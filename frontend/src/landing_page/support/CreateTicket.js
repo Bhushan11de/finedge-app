@@ -2,7 +2,8 @@ import React from "react";
 
 function Stats() {
   const handleButtonClick = (e) => {
-    e.preventDefault();  };
+    e.preventDefault();
+  };
 
   return (
     <div className="container p-3">
