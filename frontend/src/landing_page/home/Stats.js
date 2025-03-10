@@ -1,6 +1,11 @@
 import React from "react";
 
 function Stats() {
+  const handleLinkClick = (e) => {
+    e.preventDefault(); // Prevents the default action
+    // Add your logic here (e.g., show demo, navigate, etc.)
+  };
+
   return (
     <div className="container p-3">
       <div className="row p-5">
@@ -16,14 +21,15 @@ function Stats() {
           <p className="text-muted">With initiatives like Nudge and Kill Switch, we don't just facilitate transactions, but actively help you do better with your money.</p>
         </div>
         <div className="col-6 p-5">
-          <img src="media/images/ecosystem.png" alt="" style={{ width: "90%" }} />
+          <img src="media/images/ecosystem.png" alt="Ecosystem overview" style={{ width: "90%" }} />
           <div className="text-center">
-            <a href="javascript:void(0)" className="mx-5" style={{ textDecoration: "none" }}>
-              Explore ours products <i className="fa-solid fa-arrow-right-long"></i>
-            </a>
-            <a href="javascript:void(0)" style={{ textDecoration: "none" }}>
+            {/* Replaced 'a' tags with 'button' for better accessibility */}
+            <button onClick={handleLinkClick} className="mx-5" style={{ textDecoration: "none", background: "none", border: "none", color: "#387ed1" }}>
+              Explore our products <i className="fa-solid fa-arrow-right-long"></i>
+            </button>
+            <button onClick={handleLinkClick} style={{ textDecoration: "none", background: "none", border: "none", color: "#387ed1" }}>
               Try Kite Demo <i className="fa-solid fa-arrow-right-long"></i>
-            </a>
+            </button>
           </div>
         </div>
       </div>
