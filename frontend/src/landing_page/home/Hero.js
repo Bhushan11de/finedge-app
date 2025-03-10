@@ -17,4 +17,12 @@ function Hero() {
         <button
           style={{ width: "20%", margin: "0 auto" }}
           className="p-2 btn btn-primary fs-5"
-         
+        >
+          Start Investing
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default Hero;
