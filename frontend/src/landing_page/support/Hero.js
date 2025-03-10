@@ -1,36 +1,34 @@
 import React from "react";
 
-function Hero() {
+function Stats() {
   return (
-    <section className="container-fluid" id="supportHero">
-      <div className="p-5 " id="supportWrapper">
-        <h4>Support Portal</h4>
-        <a href="">Track Tickets</a>
-      </div>
-      <div className="row p-5 m-3">
-        <div className="col-6 p-3">
-          <h1 className="fs-3">Search for an answer or browse help topics to create a ticket</h1>
-          <input placeholder="Eg. how do I activate F&O" />
-          <br />
-          <a href="">Track account opening</a>
-          <a href="">Track segment activation</a>
-          <a href="">Intraday margins</a>
-          <a href="">Kite user manual</a>
+    <div className="container p-3">
+      <div className="row p-5">
+        <div className="col-6 p-5">
+          <h1 className="fs-2 mb-5">Trust with confidence</h1>
+          <h2 className="fs-4">Customer-first always</h2>
+          <p className="text-muted">That's why 1.5+ crore customers trust Zerodha with ₹4.5+ lakh crores worth of equity investments.</p>
+          <h2 className="fs-4">No spam or gimmicks</h2>
+          <p className="text-muted">No gimmicks, spam, "gamification", or annoying push notifications. High quality apps that you use at your pace, the way you like.</p>
+          <h2 className="fs-4">The Zerodha universe</h2>
+          <p className="text-muted">Not just an app, but a whole ecosystem. Our investments in 30+ fintech startups offer you tailored services specific to your needs.</p>
+          <h2 className="fs-4">Do better with money</h2>
+          <p className="text-muted">With initiatives like Nudge and Kill Switch, we don't just facilitate transactions, but actively help you do better with your money.</p>
         </div>
-        <div className="col-6 p-3">
-          <h1 className="fs-3">Featured</h1>
-          <ol>
-            <li>
-              <a href="">Current Takeovers and Delisting - January 2024</a>
-            </li>
-            <li>
-              <a href="">Latest Intraday leverages - MIS & CO</a>
-            </li>
-          </ol>
+        <div className="col-6 p-5">
+          <img src="media/images/ecosystem.png" alt="Ecosystem Diagram" style={{ width: "90%" }} />
+          <div className="text-center">
+            <button className="mx-5" style={{ textDecoration: "none" }}>
+              Explore our products <i className="fa-solid fa-arrow-right-long"></i>
+            </button>
+            <button style={{ textDecoration: "none" }}>
+              Try Kite Demo <i className="fa-solid fa-arrow-right-long"></i>
+            </button>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
-export default Hero;
+export default Stats;
