@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../landing_page/images/Finedgelogo.jpg"; // ✅ Logo Path Verify करो
+import logo from "../landing_page/images/Finedgelogo.jpg"; // ✅ Logo Path Verify किया
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg border-bottom" style={{ backgroundColor: "#FFF" }}>
+    <nav className="navbar navbar-expand-lg navbar-light sticky-top border-bottom" style={{ backgroundColor: "#ffffff" }}>
       <div className="container p-2">
         <Link className="navbar-brand" to="/">
           <img src={logo} alt="Finedge Logo" style={{ width: "150px" }} />
@@ -35,7 +35,7 @@ function Navbar() {
               <Link className="nav-link" to="/support">Support</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link btn btn-primary text-white" to="/register">
+              <Link className="nav-link btn btn-primary text-white" to="/register" style={{ padding: "10px 20px", borderRadius: "5px" }}>
                 Register
               </Link>
             </li>
