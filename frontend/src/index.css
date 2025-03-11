@@ -5,6 +5,7 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
 /* ✅ Navbar Styles */
@@ -12,6 +13,7 @@ body {
   background: #ffffff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   padding: 12px 20px;
+  transition: background-color 0.3s ease;
 }
 
 .navbar-brand img {
@@ -31,6 +33,11 @@ body {
   border-radius: 5px;
 }
 
+/* Change navbar background when scrolled */
+.navbar.scrolled {
+  background: #003d99;
+}
+
 /* ✅ Buttons */
 button,
 .navbar-toggler {
@@ -39,12 +46,14 @@ button,
   font-size: 16px;
   border: none;
   transition: 0.3s;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 button:hover,
 .navbar-toggler:hover {
   background-color: #0052cc;
   color: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* ✅ Register Button */
@@ -64,9 +73,10 @@ footer {
   background: #003d99;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 25px;
   font-size: 14px;
   margin-top: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 /* ✅ Form Styles (For Signup Page) */
@@ -75,11 +85,18 @@ footer {
   border: 1px solid #ccc;
   padding: 10px;
   font-size: 16px;
+  transition: all 0.3s;
 }
 
 .form-control:focus {
   border-color: #0052cc;
   box-shadow: 0px 0px 8px rgba(0, 82, 204, 0.2);
+  outline: none;
+}
+
+/* Add hover effect on form fields */
+.form-control:hover {
+  border-color: #0052cc;
 }
 
 /* ✅ Submit Button */
@@ -90,8 +107,45 @@ footer {
   font-size: 16px;
   border-radius: 5px;
   transition: 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary:hover {
   background-color: #003d99;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Hover effects for links and buttons */
+a:hover, .btn:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* ✅ Scroll to Top Button Styles */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0052cc;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.scroll-to-top:hover {
+  background-color: #003d99;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* ✅ Mobile Styles */
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    padding: 8px 12px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
 }
