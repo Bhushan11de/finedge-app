@@ -1,12 +1,12 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
+const app = express();
 const port = process.env.PORT || 3002;
-const url = process.env.MONGO_URL;
+const mongoURL = process.env.MONGO_URL;
 
 const holdingsRoute = require("./routes/holdingsRoute");
 const positionsRoute = require("./routes/positionsRoute");
@@ -22,6 +22,15 @@ app.use("/user", userRoute);
 app.use("/orders", orderRoute);
 
 app.listen(port, async () => {
-  console.log(`App Is listening On ${port}`);
-  await mongoose.connect(url).then(() => console.log("Connected To DB"));
+  console.log(`App is listening on ${port}`);
+  try {
+    await mongoose.connect(mongoURL, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log("Connected to DB");
+  } catch (error) {
+    console.error("MongoDB connection failed:", error.message);
+    process.exit(1);
+  }
 });
