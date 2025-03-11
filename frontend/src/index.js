@@ -7,9 +7,8 @@ import HomePage from "./landing_page/home/HomePage";
 import AboutPage from "./landing_page/about/AboutPage";
 import ProductPage from "./landing_page/products/ProductsPage";
 import PricingPage from "./landing_page/pricing/PricingPage";
-import Signup from "./landing_page/signup/Signup";
+import Signup from "./landing_page/signup/Signup";  // ✅ Signup Page Import
 import SupportPage from "./landing_page/support/SupportPage";
-import Register from "./landing_page/register/Register"; // ✅ Added Register Page Import
 
 import Navbar from "./landing_page/Navbar";
 import Footer from "./landing_page/Footer";
@@ -22,7 +21,7 @@ root.render(
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/signup" element={<Signup />} />
-      <Route path="/register" element={<Register />} />  {/* ✅ Added Register Route */}
+      <Route path="/register" element={<Signup />} />  {/* ✅ Register को Signup से लिंक किया */}
       <Route path="/about" element={<AboutPage />} />
       <Route path="/product" element={<ProductPage />} />
       <Route path="/pricing" element={<PricingPage />} />
