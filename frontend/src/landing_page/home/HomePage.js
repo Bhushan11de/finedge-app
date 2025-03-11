@@ -5,7 +5,6 @@ import Stats from "./Stats";
 import Pricing from "./Pricing";
 import Education from "./Education";
 import OpenAccount from "../OpenAccount";
-import Team from "../team/Team"; // ✅ Corrected import path
 import { Link } from "react-router-dom";
 
 function HomePage() {
@@ -28,8 +27,15 @@ function HomePage() {
       </section>
 
       {/* ✅ Priti Jadhav's Info Section (Footer ke upar) */}
-      <section className="team-section">
-        <Team />
+      <section className="p-5 mt-5 text-center" style={{ backgroundColor: "#f4f6f9" }}>
+        <h2 className="text-muted">Meet Our Guide</h2>
+        <div className="container">
+          <h3>Priti Jadhav</h3>
+          <h5>Project Teacher</h5>
+          <p>Priti Jadhav has been instrumental in guiding and mentoring students in their project development.</p>
+          <p>With experience in teaching and project management, she prepares students for industry standards.</p>
+          <p>In her free time, Priti enjoys reading books and exploring new technologies.</p>
+        </div>
       </section>
     </>
   );
