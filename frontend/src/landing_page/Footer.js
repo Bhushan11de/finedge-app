@@ -10,19 +10,32 @@ function Footer() {
             {/* ✅ Updated Logo Path */}
             <img src={logo} alt="Finedge Logo" style={{ width: "50%" }} className="mb-3" />
             <p className="mb-4">&copy; 2010 - 2024, Finedge Broking Ltd. All rights reserved.</p>
+            
+            {/* Social Media Icons */}
             <div className="fs-4 d-flex gap-3 text-muted">
-              <i className="fa-brands fa-x-twitter"></i>
-              <i className="fa-brands fa-square-facebook"></i>
-              <i className="fa-brands fa-instagram"></i>
-              <i className="fa-brands fa-linkedin"></i>
+              <a href="https://x.com/sgbaustudents?lang=en" target="_blank" rel="noopener noreferrer">
+                <i className="fa-brands fa-twitter"></i>
+              </a>
+              <a href="https://sgbau.ac.in/" target="_blank" rel="noopener noreferrer">
+                <i className="fa-brands fa-facebook-square"></i>
+              </a>
+              <a href="https://www.instagram.com/sgbaustudents/" target="_blank" rel="noopener noreferrer">
+                <i className="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/school/sant-gadge-baba-amravati-university-amravati/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
+                <i className="fa-brands fa-linkedin"></i>
+              </a>
             </div>
             <hr />
+            {/* Additional Social Media Icons */}
             <div className="fs-4 d-flex gap-3 text-muted">
-              <i className="fa-brands fa-youtube"></i>
-              <i className="fa-solid fa-comment"></i>
-              <i className="fa-brands fa-telegram"></i>
+              <a href="https://www.youtube.com/@santgadgebabaamravatiunive9624" target="_blank" rel="noopener noreferrer">
+                <i className="fa-brands fa-youtube"></i>
+              </a>
             </div>
           </div>
+
+          {/* Footer Navigation */}
           <div className="col footer-nav">
             <p>Company</p>
             <a href="/">About</a>
@@ -42,6 +55,7 @@ function Footer() {
             <a href="/">Finedge Cares (CSR)</a>
             <br />
           </div>
+
           <div className="col footer-nav">
             <p>Support</p>
             <a href="/">Contact us</a>
@@ -55,6 +69,7 @@ function Footer() {
             <a href="/">Downloads & resources</a>
             <br />
           </div>
+
           <div className="col footer-nav">
             <p>Account</p>
             <a href="/">Open an account</a>
@@ -62,9 +77,11 @@ function Footer() {
             <a href="/">Fund transfer</a>
           </div>
         </div>
+
+        {/* Footer Disclaimer */}
         <div className="mt-5 text-muted" style={{ fontSize: "14px" }}>
           <p>
-            Finedge Broking Ltd.: Member of NSE, BSE​ &​ MCX – SEBI Registration no.: INZ000031633 CDSL/NSDL: Depository services through Finedge Broking Ltd. – SEBI Registration no.: IN-DP-431-2019 Commodity Trading through Finedge Commodities Pvt. Ltd. MCX: 46025; NSE-50001 – SEBI Registration no.: INZ000038238 
+            Finedge Broking Ltd.: Member of NSE, BSE​ &​ MCX – SEBI Registration no.: INZ000031633 CDSL/NSDL: Depository services through Finedge Broking Ltd. – SEBI Registration no.: IN-DP-431-2019 Commodity Trading through Finedge Commodities Pvt. Ltd. MCX: 46025; NSE-50001 – SEBI Registration no.: INZ000038238
           </p>
           <br />
           <p>
@@ -76,13 +93,15 @@ function Footer() {
           </p>
           <br />
         </div>
+
+        {/* Footer Links */}
         <div className="mt-2 text-muted d-flex gap-3 justify-content-center footer-links" style={{ fontSize: "15px" }}>
           <p>NSE</p>
           <p>BSE</p>
           <p>MCX</p>
           <p>Terms & Conditions</p>
           <p>Policies and procedures</p>
-          <p>Privacy Policy </p>
+          <p>Privacy Policy</p>
           <p>Disclosure</p>
           <p>For investors Attention</p>
           <p>Investors charter</p>
