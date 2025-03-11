@@ -5,6 +5,7 @@ import Stats from "./Stats";
 import Pricing from "./Pricing";
 import Education from "./Education";
 import OpenAccount from "../OpenAccount";
+import Team from "../Team"; // ✅ Team component import kiya
 import { Link } from "react-router-dom";
 
 function HomePage() {
@@ -24,6 +25,11 @@ function HomePage() {
         <Link to="/register" className="btn btn-primary btn-lg">
           Sign Up Now
         </Link>
+      </section>
+
+      {/* ✅ Priti Jadhav's Info Section (Footer ke upar) */}
+      <section className="team-section">
+        <Team />
       </section>
     </>
   );
