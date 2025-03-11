@@ -4,16 +4,55 @@ function Register() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    password: ""
+    password: "",
+  });
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    password: "",
   });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const validateForm = () => {
+    let formErrors = { name: "", email: "", password: "" };
+    let valid = true;
+
+    if (!formData.name.trim()) {
+      formErrors.name = "Name is required.";
+      valid = false;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email || !emailPattern.test(formData.email)) {
+      formErrors.email = "Please enter a valid email address.";
+      valid = false;
+    }
+
+    if (formData.password.length < 6) {
+      formErrors.password = "Password must be at least 6 characters long.";
+      valid = false;
+    }
+
+    setErrors(formErrors);
+    return valid;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("User Registered:", formData);
+
+    if (validateForm()) {
+      console.log("User Registered:", formData);
+      // Clear the form after successful submission
+      setFormData({
+        name: "",
+        email: "",
+        password: "",
+      });
+      setErrors({ name: "", email: "", password: "" });
+    }
   };
 
   return (
@@ -30,6 +69,7 @@ function Register() {
             onChange={handleChange}
             required
           />
+          {errors.name && <small className="text-danger">{errors.name}</small>}
         </div>
         <div className="mb-3">
           <label className="form-label">Email</label>
@@ -41,6 +81,7 @@ function Register() {
             onChange={handleChange}
             required
           />
+          {errors.email && <small className="text-danger">{errors.email}</small>}
         </div>
         <div className="mb-3">
           <label className="form-label">Password</label>
@@ -52,8 +93,13 @@ function Register() {
             onChange={handleChange}
             required
           />
+          {errors.password && (
+            <small className="text-danger">{errors.password}</small>
+          )}
         </div>
-        <button type="submit" className="btn btn-primary">Sign Up</button>
+        <button type="submit" className="btn btn-primary">
+          Sign Up
+        </button>
       </form>
     </div>
   );
