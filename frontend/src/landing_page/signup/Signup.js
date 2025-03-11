@@ -1,8 +1,8 @@
 import React from "react";
-import Register from "./Register"; // Register component ko import kar rahe hain
+import Register from "../register/Register"; // ✅ Corrected import path
 
 function Signup() {
-  return <Register />; // Register component ko render kar rahe hain
+  return <Register />; // Register component ko render kar raha hai
 }
 
 export default Signup;
