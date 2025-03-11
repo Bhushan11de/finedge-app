@@ -8,11 +8,11 @@ function RightSection({ imageUrl, productName, productDescrption, learnMore }) {
           <h1>{productName}</h1>
           <p>{productDescrption}</p>
           <a href={learnMore} style={{ textDecoration: "none", color: "#387ed1" }}>
-            Learn More <i class="fa-solid fa-arrow-right-long"></i>
+            Learn More <i className="fa-solid fa-arrow-right-long"></i>
           </a>
         </div>
         <div className="col-6">
-          <img src={imageUrl} />
+          <img src={imageUrl} alt={productName} />
         </div>
       </div>
     </div>
