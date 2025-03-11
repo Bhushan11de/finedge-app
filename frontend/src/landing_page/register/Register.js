@@ -4,7 +4,7 @@ function Register() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    password: "",
+    password: ""
   });
 
   const handleChange = (e) => {
@@ -14,7 +14,6 @@ function Register() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("User Registered:", formData);
-    alert("Registration Successful!");
   };
 
   return (
@@ -61,4 +60,3 @@ function Register() {
 }
 
 export default Register;
-
