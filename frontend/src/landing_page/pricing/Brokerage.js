@@ -6,9 +6,13 @@ function Brokerage() {
       <div className="row p-5 mt-5 text-center border-top">
         <div className="col-8 p-4">
           <h3 className="fs-5 mb-4">
-            <a href="javascript:void(0);" aria-label="Open Brokerage Calculator" style={{ textDecoration: "none", color: "#387ed1" }}>
+            <button
+              onClick={() => alert("Brokerage Calculator Clicked")} // Replace with actual logic
+              className="btn btn-link text-primary"
+              style={{ textDecoration: "none" }}
+            >
               Brokerage Calculator
-            </a>
+            </button>
           </h3>
           <ul className="text-muted" style={{ textAlign: "left", lineHeight: "2.5" }}>
             <li style={{ fontSize: "0.7em" }}>Call & Trade and RMS auto-squareoff: Additional charges of ₹50 + GST per order.</li>
@@ -21,9 +25,13 @@ function Brokerage() {
         </div>
         <div className="col-4 p-4">
           <h3 className="fs-5">
-            <a href="javascript:void(0);" aria-label="View List of Charges" style={{ textDecoration: "none", color: "#387ed1" }}>
+            <button
+              onClick={() => alert("List of Charges Clicked")} // Replace with actual logic
+              className="btn btn-link text-primary"
+              style={{ textDecoration: "none" }}
+            >
               List Of Charges
-            </a>
+            </button>
           </h3>
         </div>
       </div>
