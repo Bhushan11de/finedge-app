@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../media/images/Finedgelogo.jpg"; // ✅ Correct Logo Path
+import logo from "./images/Finedgelogo.jpg"; // ✅ Correct Logo Path
 
 function Navbar() {
   return (
@@ -44,3 +44,4 @@ function Navbar() {
 }
 
 export default Navbar;
+
