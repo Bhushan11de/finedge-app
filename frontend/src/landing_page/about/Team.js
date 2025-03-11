@@ -9,36 +9,23 @@ function Team() {
       </div>
       <div className="row p-5 text-muted" style={{ fontSize: "1.2em" }}>
         <div className="col-6 p-5 text-center">
-          <img
-            src="media/images/nithinKamath.jpg"
-            className="rounded-circle"
-            style={{ width: "50%" }}
-            alt="Nithin Kamath"
-          />
-          <h4 className="mt-5">Nithin Kamath</h4>
-          <h6>Founder, CEO</h6>
+          {/* Image removed */}
+          <h4 className="mt-5">Priti Jadhav</h4>
+          <h6>Project Teacher</h6>
         </div>
         <div className="col-6 p-5" style={{ fontSize: "1em" }}>
           <p>
-            Nithin bootstrapped and founded Finedge in 2010 to overcome the hurdles he faced during his decade-long stint as a trader. Today, Finedge has changed the landscape of the Indian broking industry.
+            Priti Jadhav has been instrumental in guiding and mentoring students in their project development. With a deep understanding of software engineering, Priti ensures that students are well-equipped to tackle real-world challenges and innovate.
           </p>
           <p>
-            He is a member of the SEBI Secondary Market Advisory Committee (SMAC) and the Market Data Advisory Committee (MDAC).
+            She has vast experience in teaching and project management, helping students achieve academic success while preparing them for industry standards.
           </p>
-          <p>Playing basketball is his zen.</p>
+          <p>In her free time, Priti enjoys reading books and exploring new technologies.</p>
           <p>
             Connect on{" "}
             <Link to="/" style={{ textDecoration: "none", color: "#387ed1" }}>
               Homepage
-            </Link>{" "}
-            /{" "}
-            <a href="https://tradingqna.com/u/nithin/summary" style={{ textDecoration: "none", color: "#387ed1" }}>
-              TradingQnA
-            </a>{" "}
-            /{" "}
-            <a href="https://twitter.com/Nithin0dha" style={{ textDecoration: "none", color: "#387ed1" }}>
-              Twitter
-            </a>
+            </Link>
           </p>
         </div>
       </div>
