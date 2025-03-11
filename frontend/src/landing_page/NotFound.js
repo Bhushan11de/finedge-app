@@ -10,14 +10,14 @@ function NotFound() {
           <h1 className="fs-1 mt-2">Kiaan couldn’t find that page</h1>
           <p className="text-muted fs-5 mt-2">
             We couldn’t find the page you were looking <br />
-            for Visit{" "}
+            for. Visit{" "}
             <Link to="/" style={{ textDecoration: "none", color: "#387ed1" }}>
-              Zerodha’s home page
+              Finedge’s home page
             </Link>
           </p>
         </div>
         <div className="col-6">
-          <img src="media/images/404 Kiaan.jpg" alt="404 Image" />
+          <img src="media/images/404 Kiaan.jpg" alt="404" />
         </div>
       </div>
     </div>
