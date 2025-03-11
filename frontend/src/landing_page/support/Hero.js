@@ -1,34 +1,44 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
     <section className="container-fluid" id="supportHero">
       <div className="p-5" id="supportWrapper">
         <h4>Support Portal</h4>
-        <a href="#" aria-label="Track Tickets">Track Tickets</a>
+        <Link to="/track-tickets" aria-label="Track Tickets">
+          Track Tickets
+        </Link>
       </div>
       <div className="row p-5 m-3">
         <div className="col-6 p-3">
           <h1 className="fs-3">Search for an answer or browse help topics to create a ticket</h1>
-          <input placeholder="Eg. how do I activate F&O" />
-          <br />
-          <a href="#" aria-label="Track account opening">Track account opening</a>
-          <a href="#" aria-label="Track segment activation">Track segment activation</a>
-          <a href="#" aria-label="Intraday margins">Intraday margins</a>
-          <a href="#" aria-label="Kite user manual">Kite user manual</a>
+          <input placeholder="Eg. how do I activate F&O" className="form-control mb-3" />
+          <Link to="/track-account-opening" className="d-block" aria-label="Track account opening">
+            Track account opening
+          </Link>
+          <Link to="/track-segment-activation" className="d-block" aria-label="Track segment activation">
+            Track segment activation
+          </Link>
+          <Link to="/intraday-margins" className="d-block" aria-label="Intraday margins">
+            Intraday margins
+          </Link>
+          <Link to="/kite-user-manual" className="d-block" aria-label="Kite user manual">
+            Kite user manual
+          </Link>
         </div>
         <div className="col-6 p-3">
           <h1 className="fs-3">Featured</h1>
           <ol>
             <li>
-              <a href="#" aria-label="Current Takeovers and Delisting - January 2024">
+              <Link to="/takeovers-delisting" aria-label="Current Takeovers and Delisting - January 2024">
                 Current Takeovers and Delisting - January 2024
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" aria-label="Latest Intraday leverages - MIS & CO">
+              <Link to="/intraday-leverages" aria-label="Latest Intraday leverages - MIS & CO">
                 Latest Intraday leverages - MIS & CO
-              </a>
+              </Link>
             </li>
           </ol>
         </div>
