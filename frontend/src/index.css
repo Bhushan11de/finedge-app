@@ -11,6 +11,7 @@ body {
 .navbar {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   padding: 12px 20px;
+  background-color: white;
 }
 
 .navbar-brand img {
@@ -25,6 +26,7 @@ body {
 
 .nav-link:hover {
   color: #0056b3 !important;
+  text-decoration: underline;
 }
 
 /* 🚀 Sign-Up Section */
@@ -54,6 +56,7 @@ body {
   padding: 12px 24px;
   border-radius: 30px;
   transition: all 0.3s ease-in-out;
+  border: none;
 }
 
 .signup-section .btn-primary:hover {
@@ -85,6 +88,38 @@ body {
   margin: 0 auto;
 }
 
+/* 🎖️ Team Section (Priti Jadhav Info) */
+.team-section {
+  background-color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.team-section h1 {
+  color: #333;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.team-section h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0056b3;
+}
+
+.team-section h6 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #777;
+}
+
+.team-section p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 /* 🌟 Footer */
 .footer {
   background-color: #333;
@@ -96,8 +131,10 @@ body {
 .footer a {
   color: #ffcc00;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .footer a:hover {
   color: #ffaa00;
+  text-decoration: underline;
 }
