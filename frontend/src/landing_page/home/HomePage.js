@@ -5,7 +5,7 @@ import Stats from "./Stats";
 import Pricing from "./Pricing";
 import Education from "./Education";
 import OpenAccount from "../OpenAccount";
-import Team from "../Team"; // ✅ Team component import kiya
+import Team from "../team/Team"; // ✅ Corrected import path
 import { Link } from "react-router-dom";
 
 function HomePage() {
