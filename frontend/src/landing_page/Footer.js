@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../landing_page/images/Finedgelogo.jpg"; // ✅ Sahi path
 
 function Footer() {
   return (
@@ -6,7 +7,8 @@ function Footer() {
       <div className="container mt-5">
         <div className="row mt-5">
           <div className="col">
-            <img src="media/images/logo.jpg" alt="Finedge Logo" style={{ width: "50%" }} className="mb-3" />
+            {/* ✅ Updated Logo Path */}
+            <img src={logo} alt="Finedge Logo" style={{ width: "50%" }} className="mb-3" />
             <p className="mb-4">&copy; 2010 - 2024, Finedge Broking Ltd. All rights reserved.</p>
             <div className="fs-4 d-flex gap-3 text-muted">
               <i className="fa-brands fa-x-twitter"></i>
