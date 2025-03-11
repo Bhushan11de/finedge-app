@@ -21,13 +21,16 @@ app.use("/positions", positionsRoute);
 app.use("/user", userRoute);
 app.use("/orders", orderRoute);
 
+// Global Error Handler (Catches unhandled route errors)
+app.use((err, req, res, next) => {
+  console.error("Unhandled Error:", err.message);
+  res.status(500).json({ error: "Internal Server Error" });
+});
+
 app.listen(port, async () => {
   console.log(`App is listening on ${port}`);
   try {
-    await mongoose.connect(mongoURL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(mongoURL);
     console.log("Connected to DB");
   } catch (error) {
     console.error("MongoDB connection failed:", error.message);
