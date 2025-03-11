@@ -1,3 +1,5 @@
+import React from "react";
+
 function OurStory() {
   return (
     <section className="our-story text-center py-5">
@@ -14,7 +16,7 @@ function OurStory() {
         <div className="team-members">
           <div className="team-member">
             <h4>Bhushan Deshmukh</h4>
-            <p>Devops Engineer</p>
+            <p>DevOps Engineer</p>
             <p>Bhushan is responsible for coordinating the team, ensuring the project stays on track, and managing the overall development of the platform.</p>
           </div>
           <div className="team-member">
@@ -37,3 +39,5 @@ function OurStory() {
     </section>
   );
 }
+
+export default OurStory;
