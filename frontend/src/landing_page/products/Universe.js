@@ -29,7 +29,7 @@ function Universe() {
         </div>
 
         <div className="col-4 p-3 mt-5">
-          <img src="media/images/zerodhaFundhouse.png" style={{ width: "40%" }} alt="Asset management" />
+          <img src="media/images/finedgeFundhouse.png" style={{ width: "40%" }} alt="Asset management" />
           <p className="text-muted mt-3" style={{ fontSize: "0.7em" }}>
             Asset management
           </p>
